@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import FormInput from "./template/formInput";
+import FormBeli from "./template/formBeli";
+import Table from "./template/table";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      option: [],
+      databuah: [],
+    };
+  }
+
+  render() {
+    return (
+      <>
+        <div className="form">
+          <FormInput />
+          <FormBeli />
+        </div>
+        <div className="form2">
+          <Table data={this.state.databuah} />
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;

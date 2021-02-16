@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.form {
+  float: left;
+  width: 30%;
+}
+.form2 {
+  width: 50%;
+  float: left;
+}
